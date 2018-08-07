@@ -370,7 +370,7 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.ListB
 class DBHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "ptjDB.db";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     SQLiteDatabase myDb = this.getWritableDatabase();
 
     public DBHelper(Context context) {

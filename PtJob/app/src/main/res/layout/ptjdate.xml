@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bootstrap_brand_info">
+    android:background="@color/bootstrap_brand_info"
+    android:orientation="vertical">
 
     <com.beardedhen.androidbootstrap.BootstrapLabel
         android:id="@+id/date_title"
@@ -13,10 +14,9 @@
         android:textSize="50dp"
         android:textStyle="bold"
         app:bootstrapBrand="info"
-        app:bootstrapHeading="h5" />
-  >
-    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:bootstrapHeading="h3" />
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/pra_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,26 +27,13 @@
         app:mcv_showOtherDates="defaults"
         />
 
-    <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/date_adView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        ads:adUnitId="@string/bannerCal_adId"
-        ads:adSize="SMART_BANNER"
-        />
-
-
     <com.beardedhen.androidbootstrap.BootstrapLabel
         android:id="@+id/date_ptjText"
-        android:scrollbars="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignLeft="@id/pra_date"
         android:layout_below="@id/pra_date"
-        android:layout_above="@id/date_adView"
-        app:bootstrapHeading="h6"
+        android:textSize="20dp"
         app:bootstrapBrand="info" />
 
 
@@ -60,6 +47,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/pra_date"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="35dp"
         android:layout_marginRight="20dp"/>
+
+
 </RelativeLayout>

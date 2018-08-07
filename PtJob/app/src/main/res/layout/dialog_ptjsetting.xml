@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog">
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        android:text="나의 알바 설정"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:bootstrapBrand="info"
+        app:bootstrapHeading="h3"
+         />
+
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="알바이름"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            app:bootstrapSize="md"
+            app:bootstrapBrand="info"
+            android:id="@+id/setting_ptjName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="알바 이름을 입력하세요."
+            android:layout_weight="1"
+            />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시급"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            app:bootstrapSize="md"
+            app:bootstrapBrand="info"
+            android:id="@+id/setting_ptjMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="알바 시급을 입력하세요."
+            android:inputType="number"
+            android:layout_weight="1"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="근무시간"
+            android:textSize="20dp"
+            android:layout_marginRight="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            app:bootstrapSize="md"
+            app:bootstrapBrand="info"
+            android:id="@+id/setting_ptjTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="근무 시간을 입력하세요.(X시간)"
+            android:inputType="number"
+            android:layout_weight="1"
+            />
+    </TableRow>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            app:bootstrapBrand="regular"
+            android:layout_marginLeft="1dp"
+            android:layout_marginBottom="1dp"
+            android:id="@+id/setting_cancelBtn"
+            android:text="취소"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"/>
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            app:bootstrapBrand="success"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:id="@+id/setting_saveBtn"
+            android:text="저장"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"/>
+    </LinearLayout>
+
+</TableLayout>

@@ -4,11 +4,13 @@ import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -51,6 +53,7 @@ public class PtjDate extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.ptjdate);
 
         helper = new DBHelper(getApplicationContext());
@@ -64,6 +67,7 @@ public class PtjDate extends Activity {
         title = (TextView) findViewById(R.id.date_title);
         dateView = (MaterialCalendarView) findViewById(R.id.pra_date);
         ptjTxt = (TextView) findViewById(R.id.date_ptjText);
+        ptjTxt.setMovementMethod(new ScrollingMovementMethod());
         searchBtn = (BootstrapButton) findViewById(R.id.date_ptjBtn);
 
         if (ptjName.length() >= 11) {
