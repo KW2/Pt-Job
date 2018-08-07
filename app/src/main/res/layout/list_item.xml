@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/textviewline"
+    >
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        app:bootstrapSize="xl"
+        app:bootstrapBrand="danger"
+        app:materialIcon="md_delete"
+        android:id="@+id/item_delBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"/>
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        app:bootstrapSize="xl"
+        app:bootstrapBrand="primary"
+        app:materialIcon="md_settings"
+        android:id="@+id/item_updBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/item_delBtn"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="5dp"/>
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="#A2FFFF"/>
+
+    <TextView
+        android:id="@+id/item_ptjName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="알바이름"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:id="@+id/item_moneyAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="총급여 텍스트"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/item_ptjName"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:id="@+id/item_moneyMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="이번달 월급 텍스트"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/item_moneyAll"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

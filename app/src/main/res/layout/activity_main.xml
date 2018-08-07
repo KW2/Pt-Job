@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_title"
+        android:background="@color/bootstrap_brand_info">
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bootstrapText="- 알바 시급 계산기 -"
+        app:bootstrapBrand="info"
+        app:bootstrapHeading="h4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_adViewL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bootstrap_brand_info">
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adUnitId="@string/banner_adId"
+        ads:adSize="SMART_BANNER"
+        />
+
+    </LinearLayout>
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/main_plsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/main_adViewL"
+        app:bootstrapBrand="info"
+        app:bootstrapSize="xl"
+        app:fontAwesomeIcon="fa_plus_square"/>
+
+    <ListView
+        android:layout_below="@id/main_title"
+        android:id="@+id/main_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_plsBtn"></ListView>
+
+</RelativeLayout>

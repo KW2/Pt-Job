@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bootstrap_brand_info">
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        android:id="@+id/date_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="알바 기록"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:bootstrapBrand="info"
+        app:bootstrapHeading="h5" />
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pra_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date_title"
+        android:background="#FFFFFF"
+        app:mcv_arrowColor="@color/bootstrap_brand_success"
+        app:mcv_selectionColor="#a9dbf0cb"
+        app:mcv_showOtherDates="defaults"
+        />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/date_adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        ads:adUnitId="@string/bannerCal_adId"
+        ads:adSize="SMART_BANNER"
+        />
+
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        android:id="@+id/date_ptjText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/pra_date"
+        android:layout_below="@id/pra_date"
+        android:layout_above="@id/date_adView"
+        app:bootstrapHeading="h6"
+        app:bootstrapBrand="info" />
+
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        app:badgeText="검색"
+        app:materialIcon="md_search"
+        app:bootstrapSize="xl"
+        app:bootstrapBrand="success"
+        android:id="@+id/date_ptjBtn"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pra_date"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"/>
+
+
+</RelativeLayout>

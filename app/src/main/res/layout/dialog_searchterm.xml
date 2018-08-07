@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_green">
+
+    <RelativeLayout
+        android:id="@+id/search_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bootstrap_brand_success"
+        android:layout_marginBottom="10dp">
+
+        <com.beardedhen.androidbootstrap.BootstrapLabel
+            android:id="@+id/search_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            app:bootstrapBrand="success"
+            app:bootstrapSize="sm"
+            app:fontAwesomeIcon="fa_search" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/search_endBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            app:bootstrapBrand="danger"
+            app:bootstrapSize="sm"
+            app:fontAwesomeIcon="fa_times" />
+
+        <com.beardedhen.androidbootstrap.BootstrapLabel
+            android:layout_toRightOf="@id/search_icon"
+            android:layout_toLeftOf="@id/search_endBtn"
+            android:id="@+id/term_title"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            app:bootstrapBrand="success"
+            app:bootstrapText="알바 기간 검색"/>
+
+    </RelativeLayout>
+
+
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        app:badgeText="시작일"
+        app:bootstrapSize="lg"
+        app:bootstrapBrand="secondary"
+        app:fontAwesomeIcon="fa_calendar"
+        android:id="@+id/term_startBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_relative"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="1dp"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        app:badgeText="종료일"
+        app:bootstrapSize="lg"
+        app:bootstrapBrand="secondary"
+        app:fontAwesomeIcon="fa_calendar"
+        android:id="@+id/term_endBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/term_startBtn"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="1dp"
+        />
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        android:id="@+id/term_startText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/term_startBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/term_startBtn"
+        android:layout_below="@id/search_relative"
+        android:gravity="center"
+        android:layout_marginLeft="1dp"
+        app:bootstrapText="시작일을 설정해주세요."
+        app:bootstrapBrand="secondary"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        android:id="@+id/term_endText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/term_endBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/term_endBtn"
+        android:layout_below="@id/term_startBtn"
+        android:gravity="center"
+        android:layout_marginLeft="1dp"
+        app:bootstrapText="종료일을 설정해주세요."
+        app:bootstrapBrand="secondary" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        app:materialIcon="md_search"
+        app:bootstrapBrand="info"
+        app:bootstrapSize="lg"
+        android:id="@+id/search_searchBtn"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/term_endBtn"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="3dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_searchBtn"
+        android:orientation="vertical"
+        android:background="@color/bootstrap_brand_success">
+
+        <com.beardedhen.androidbootstrap.BootstrapLabel
+            app:bootstrapText="총 근무시간: 0시간"
+            app:bootstrapHeading="h4"
+            app:bootstrapBrand="success"
+            android:id="@+id/search_timeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20dp" />
+
+        <com.beardedhen.androidbootstrap.BootstrapLabel
+            app:bootstrapText="총 급여: 0원"
+            app:bootstrapHeading="h4"
+            app:bootstrapBrand="success"
+            android:id="@+id/search_moneyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center" />
+    </LinearLayout>
+
+</RelativeLayout>

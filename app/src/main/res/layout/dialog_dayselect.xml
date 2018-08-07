@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog">
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        app:bootstrapBrand="info"
+        app:bootstrapHeading="h4"
+        android:id="@+id/daySelect_month"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        app:bootstrapHeading="h1"
+        app:bootstrapBrand="secondary"
+        android:id="@+id/daySelect_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        >
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            app:fontAwesomeIcon="fa_minus"
+            app:bootstrapSize="lg"
+            app:bootstrapBrand="primary"
+            android:id="@+id/daySelect_minBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            />
+        <TextView
+            android:id="@+id/daySelect_time"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/daySelect_minBtn"
+            android:layout_centerInParent="true"
+            android:layout_alignBaseline="@id/daySelect_minBtn"
+            />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            app:fontAwesomeIcon="fa_plus"
+            app:bootstrapSize="lg"
+            app:bootstrapBrand="primary"
+            android:id="@+id/daySelect_plsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/daySelect_time"
+            />
+    </RelativeLayout>
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        app:bootstrapBrand="info"
+        app:bootstrapHeading="h5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/daySelect_dateText"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            app:bootstrapText="   취소   "
+            android:layout_marginLeft="1dp"
+            android:layout_marginBottom="1dp"
+            android:id="@+id/daySelect_cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_weight="0.5"/>
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            app:bootstrapBrand="success"
+            app:bootstrapText="알바 완료"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:id="@+id/daySelect_checkBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_weight="0.5"/>
+    </LinearLayout>
+
+</LinearLayout>
